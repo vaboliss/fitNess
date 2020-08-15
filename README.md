@@ -1,7 +1,9 @@
 Fitness web app
 
 Front - Angular
+
 Back - Node js
+
 Database - MongoDb
 
 
