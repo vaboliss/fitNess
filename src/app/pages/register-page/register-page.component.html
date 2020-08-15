@@ -1,0 +1,53 @@
+<div class="main-container">
+    <mat-card class="card" variant="outlined">
+      <mat-card-header>
+        <mat-icon mat-card-avatar>fitness_center</mat-icon>
+        <mat-card-title>Registration form for Fitness tracker</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="center">
+        <form
+          class="form"
+          [formGroup]="registrationForm"
+          (ngSubmit)="register(registrationForm.value)"
+        >
+        <mat-form-field appearance="outline">
+            <mat-label>Name</mat-label>
+            <input
+              formControlName="name"
+              matInput
+              placeholder="John"
+              autocomplete="off"
+            />
+            <mat-icon matSuffix>face</mat-icon> </mat-form-field
+          ><br />
+          <mat-form-field appearance="outline">
+            <mat-label>Email</mat-label>
+            <input
+              formControlName="email"
+              matInput
+              placeholder="example@email.com"
+              autocomplete="off"
+            />
+            <mat-icon matSuffix>email</mat-icon> </mat-form-field
+          ><br />
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input formControlName="password" matInput type="password" />
+            <mat-icon matSuffix>lock</mat-icon>
+            <mat-hint *ngIf="!hide">{{ message }}</mat-hint>
+          </mat-form-field>
+          <div class="actions">
+              <button type="submit" class="register" mat-raised-button>
+                  Register</button><br />
+          </div>
+        </form>
+        <div class="actions">
+          <button class="login" mat-raised-button [routerLink]="['/login']">
+            Already have an account ?
+          </button>
+        </div>
+      </mat-card-content>
+      <mat-card-actions> </mat-card-actions>
+    </mat-card>
+  </div>
+  

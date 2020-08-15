@@ -1,0 +1,45 @@
+.main{
+    height: 100vh;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #673ab7;
+}
+.mat-card-title{
+    font-size: 4rem;
+}
+.card{
+    max-width: 60rem;
+    padding: 50px;
+}
+p{
+    font-size: 1.4rem;
+    font-family: "Courier New", Courier, monospace;
+}
+.angular{
+    display: inline-block;
+    margin-left: 2rem;
+    height: 5rem;
+    width: 5rem;
+}
+.nodejs{
+    display: inline-block;
+    margin-left: 2rem;
+    height: 5rem;
+    width: 8rem;
+}
+.mat-raised-button{
+    width: 12rem;
+    height: 3.5rem;
+    background-color:#ffb300;
+    font-size: 1.2rem;
+}
+.mat-card-actions{
+    text-align: center;
+}
+.mongodb{
+    display: inline-block;
+    margin-left: 2rem;
+    height: 5rem;
+    width: 10rem;
+}

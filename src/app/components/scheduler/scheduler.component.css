@@ -1,0 +1,7 @@
+input{
+    width: 2 rem;
+}
+.exercise{
+    display: flex;
+    justify-content: space-between;
+}

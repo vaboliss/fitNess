@@ -1,0 +1,48 @@
+<kendo-scheduler
+  [kendoSchedulerBinding]="events"
+  [kendoSchedulerReactiveEditing]="createFormGroup"
+  [selectedDate]="selectedDate"
+  [group]="group"
+>
+  <kendo-scheduler-month-view> </kendo-scheduler-month-view>
+  <ng-template
+    kendoSchedulerEditDialogTemplate
+    autoFocusedElement=".title-input"
+    let-formGroup="formGroup"
+    let-isNew="isNew"
+    let-editMode="editMode"
+  >
+    <form>
+      <div class="k-form-inline">
+        <div class="k-form-field">
+          <span>WorkoutName</span>
+          <kendo-dropdownlist
+            [data]="workoutNames"
+            [textField]="'text'"
+            [valueField]="'value'"
+            [(ngModel)]="workoutType"
+          >
+          </kendo-dropdownlist>
+        </div>
+        <div class="k-form-field k-datetime-picker-wrapper">
+          <button (click)="AddWorkout()" class="btn btn-success">
+            Fetch workout
+          </button>
+        </div>
+        <label>exercises: </label>
+        <br />
+        <div class="exercise" *ngFor="let ex of excercises">
+          <mat-label>{{ ex.exerciseName }} : </mat-label>
+          <input matInput type="number" placeholder="Reps" />
+          <input matInput type="number" placeholder="Sets" />
+          <input matInput type="number" placeholder="Weight" />
+        </div>
+        <div class="k-form-field k-datetime-picker-wrapper mt-5">
+          <span>Date</span>
+          <kendo-datepicker [formControl]="formGroup.get('start')">
+          </kendo-datepicker>
+        </div>
+      </div>
+    </form>
+  </ng-template>
+</kendo-scheduler>

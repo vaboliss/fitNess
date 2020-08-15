@@ -1,0 +1,38 @@
+.mat-card-avatar{
+    font-size: 24px;
+  }
+  mat-form-field.mat-form-field {
+    font-size: 20px;
+  }
+  .main-container{
+    background: url(../../../assets/pictures/login.jpg) no-repeat;
+    background-size: cover;
+    height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  .login{
+    background-color: #ffa000;
+  }
+  .register{
+      border: 1px solid #ffa000;
+  }
+  .mat-hint{
+    color:red;
+  }
+  .mat-raised-button{
+    height: 3rem;
+    width: 16rem;
+  }
+  .mat-form-field{
+    width: 100%;
+  }
+  .mat-card{
+    width: 35rem;
+    background-color:#fafafa;
+  }
+  .actions{
+    margin-top: 2rem;
+    text-align: center;
+  }

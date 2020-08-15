@@ -1,0 +1,26 @@
+<div class="mat-elevation-z8">
+  <table mat-table [dataSource]="dataSource">
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef><b>Workout Name</b></th>
+      <td style="width: 70%;" mat-cell *matCellDef="let element">{{ element.workoutName }}</td>
+    </ng-container>
+    
+    <ng-container matColumnDef="actionsColumn">
+      <th *matHeaderCellDef>
+        <button class="btn btn-success" [routerLink]="['/workouts/create']">
+          Create new
+        </button>
+      </th>
+      <td *matCellDef="let row">
+        <button class="btn btn-info" [routerLink]="['/workouts', row._id]">Edit</button>
+        <button class="btn btn-danger"  (click)="delete(row._id)">Delete</button>
+      </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator [pageSizeOptions]="[10]" showFirstLastButtons></mat-paginator>
+</div>
